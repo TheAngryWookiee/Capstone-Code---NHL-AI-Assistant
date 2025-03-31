@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHL AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="./images/nhl.png" alt="NHL Logo" style="max-width: 10%; max-height: 10%;">
+        <h2>NHL AI Assistant</h2>
+    </div>    
+    
+    <label for="games">Min Games Played:</label>
+    <input type="number" id="games" placeholder="Enter min games played">
+    
+    <div class="team-selection">
+        <div id="team-square" class="team-square" onclick="toggleTeamMenu()">
+            Select Team
+        </div>
+        <div id="team-menu" class="team-menu" style="display: none;">
+            <div class="division">
+                <h4>Atlantic Division</h4>
+                <div class="division-teams">
+                    <div class="team-option" onclick="selectTeam('BOS')">
+                        <img src="./images/bos.png" alt="BOS">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('BUF')">
+                        <img src="./images/buf.png" alt="BUF">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('DET')">
+                        <img src="./images/det.png" alt="DET">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('MTL')">
+                        <img src="./images/mtl.png" alt="MTL">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('OTT')">
+                        <img src="./images/ott.png" alt="OTT">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('TBL')">
+                        <img src="./images/tbl.png" alt="TBL">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('TOR')">
+                        <img src="./images/tor.png" alt="TOR">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="division">
+                <h4>Central Division</h4>
+                <div class="division-teams">
+                    <div class="team-option" onclick="selectTeam('CHI')">
+                        <img src="./images/chi.png" alt="CHI">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('COL')">
+                        <img src="./images/col.png" alt="COL">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('DAL')">
+                        <img src="./images/dal.png" alt="DAL">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('MIN')">
+                        <img src="./images/min.png" alt="MIN">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('NSH')">
+                        <img src="./images/nsh.png" alt="NSH">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('STL')">
+                        <img src="./images/stl.png" alt="STL">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('UTA')">
+                        <img src="./images/uta.png" alt="UTA">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('WPG')">
+                        <img src="./images/wpg.png" alt="WPG">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="division">
+                <h4>Pacific Division</h4>
+                <div class="division-teams">
+                    <div class="team-option" onclick="selectTeam('ANA')">
+                        <img src="./images/ana.png" alt="ANA">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('CGY')">
+                        <img src="./images/cgy.png" alt="CGY">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('EDM')">
+                        <img src="./images/edm.png" alt="EDM">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('LAK')">
+                        <img src="./images/lak.png" alt="LAK">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('SJS')">
+                        <img src="./images/sjs.png" alt="SJS">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('SEA')">
+                        <img src="./images/sea.png" alt="SEA">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('VAN')">
+                        <img src="./images/van.png" alt="VAN">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('VGK')">
+                        <img src="./images/vgk.png" alt="VGK">
+                        <span></span>                   
+                </div>
+            </div>
+            <div class="division">
+                <h4>Metropolitan Division</h4>
+                <div class="division-teams">
+                    <div class="team-option" onclick="selectTeam('CAR')">
+                        <img src="./images/car.png" alt="CAR">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('CBJ')">
+                        <img src="./images/cbj.png" alt="CBJ">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('NJD')">
+                        <img src="./images/njd.png" alt="NJD">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('NYI')">
+                        <img src="./images/nyi.png" alt="NYI">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('NYR')">
+                        <img src="./images/nyr.png" alt="NYR">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('PHI')">
+                        <img src="./images/phi.png" alt="PHI">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('PIT')">
+                        <img src="./images/pit.png" alt="PIT">
+                        <span></span>
+                    </div>
+                    <div class="team-option" onclick="selectTeam('WSH')">
+                        <img src="./images/wsh.png" alt="WSH">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="sendRequest()">Predict</button>
+    
+    <div id="response" class="response-section">
+        <div id="weakest-areas" class="weakest-areas"></div>
+        <div id="trade-targets" class="trade-targets"></div>
+    </div>
+
+    <script>
+        let selectedTeam = null;
+
+        function toggleTeamMenu() {
+            const menu = document.getElementById("team-menu");
+            menu.style.display = menu.style.display === "none" ? "block" : "none";
+        }
+
+        function selectTeam(team) {
+            selectedTeam = team;
+            const teamSquare = document.getElementById("team-square");
+            teamSquare.innerHTML = `<img src="/images/${team.toLowerCase()}.png" alt="${team}">`;
+            document.getElementById("team-menu").style.display = "none";
+        }
+
+        function sendRequest() {
+            const minGames = document.getElementById("games").value;
+
+            if (!selectedTeam || !minGames) {
+                alert("Please select a team and enter minimum games played.");
+                return;
+            }
+
+            fetch("http://127.0.0.1:5000/predict", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    team: selectedTeam,
+                    min_games_played: parseInt(minGames)
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Clear previous response
+                document.getElementById("weakest-areas").innerHTML = '';
+                document.getElementById("trade-targets").innerHTML = '';
+
+                // Display weakest areas
+                if (data.weakest_areas) {
+                    const weakestAreasHeading = document.createElement("h3");
+                    weakestAreasHeading.textContent = "Weakest Areas";
+                    document.getElementById("weakest-areas").appendChild(weakestAreasHeading);
+                    
+                    const weakestAreasList = document.createElement("ul");
+                    data.weakest_areas.forEach(area => {
+                        const li = document.createElement("li");
+                        li.textContent = area;
+                        weakestAreasList.appendChild(li);
+                    });
+                    document.getElementById("weakest-areas").appendChild(weakestAreasList);
+                }
+
+                // Display trade targets
+                if (data.trade_targets && data.trade_targets.length > 0) {
+                    const tradeTargetHeading = document.createElement("h3");
+                    tradeTargetHeading.textContent = "Trade Targets";
+                    document.getElementById("trade-targets").appendChild(tradeTargetHeading);
+
+                    const table = document.createElement("table");
+                    const headers = ['Season', 'Name', 'Team', 'Position', 'Games Played', 'Total Shots', 'xGoals', 'Game Score', 'Corsi', 
+                    'Goals', 'Primary Assists', 'Secondary Assists'];
+                    const thead = document.createElement("thead");
+                    const headerRow = document.createElement("tr");
+                    headers.forEach(header => {
+                        const th = document.createElement("th");
+                        th.textContent = header;
+                        headerRow.appendChild(th);
+                    });
+                    thead.appendChild(headerRow);
+                    table.appendChild(thead);
+                    
+                    const tbody = document.createElement("tbody");
+                    data.trade_targets.forEach(player => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${player.season}</td>
+                            <td>${player.name}</td>
+                            <td>${player.team}</td>
+                            <td>${player.position}</td>
+                            <td>${player.games_played}</td>
+                            <td>${player.total_shots}</td>
+                            <td>${player.I_F_xGoals}</td>
+                            <td>${player.gameScore}</td>
+                            <td>${player.onIce_corsiPercentage}</td>
+                            <td>${player.I_F_goals}</td>
+                            <td>${player.I_F_primaryAssists}</td>
+                            <td>${player.I_F_secondaryAssists}</td>
+                            
+                        `;
+                        tbody.appendChild(row);
+                    });
+                    table.appendChild(tbody);
+                    document.getElementById("trade-targets").appendChild(table);
+                } else {
+                    document.getElementById("trade-targets").innerHTML = 'No suitable trade candidates found.';
+                }
+            })
+            .catch(error => {
+                document.getElementById("response").textContent = "Error: " + error;
+            });
+        }
+        function selectTeam(team) {
+            selectedTeam = team; // Set the selected team
+            const teamSquare = document.getElementById("team-square");
+            
+            // Update the team-square content with the team's logo
+            teamSquare.innerHTML = `<img src="./images/${team.toLowerCase()}.png" alt="${team}" style="max-width: 100%; max-height: 100%;">`;
+            
+            // Hide the team menu
+            document.getElementById("team-menu").style.display = "none";
+        }
+    </script>
+</body>
+</html>

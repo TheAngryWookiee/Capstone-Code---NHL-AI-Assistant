@@ -1,0 +1,210 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light gray background for subtle contrast */
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.header img {
+    max-width: 5%;
+    max-height: 5%;
+}
+
+.header h2 {
+    margin: 0;
+    color: white;
+    font-size: 24px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Input Fields */
+label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Response Sections */
+.response-section {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#response {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* Weakest Areas and Trade Targets */
+.weakest-areas ul,
+.trade-targets table {
+    margin-left: 0;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.weakest-areas ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.weakest-areas ul li {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.trade-targets th,
+.trade-targets td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.trade-targets th {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.trade-targets td {
+    background-color: #f9f9f9;
+}
+
+/* Team Selection Styling */
+.team-selection {
+    position: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.team-square {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.team-square img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.team-menu {
+    position: absolute;
+    top: 160px;
+    background-color: white;
+    border: 2px solid black;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Division Styling */
+.division {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.division h4 {
+    margin-bottom: 10px;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+}
+
+.division-teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.team-option {
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.team-option img {
+    max-width: 75px;
+    max-height: 75px;
+}
+
+.team-option span {
+    color: white;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.team-option:hover {
+    transform: scale(1.1);
+    background-color: #444;
+}
