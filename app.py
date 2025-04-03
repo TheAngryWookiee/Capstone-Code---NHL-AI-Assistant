@@ -106,8 +106,8 @@ def predict():
 
     response_data = {
         'team': team,
-        'weakest_areas': weakest_areas,  # Properly formatted weaknesses
-        'trade_targets': trade_targets  # Valid player recommendations
+        'weakest_areas': weakest_areas,  
+        'trade_targets': trade_targets  
     }
 
     return jsonify(response_data)
